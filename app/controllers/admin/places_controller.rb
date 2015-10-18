@@ -2,14 +2,33 @@ module Admin
   class PlacesController < ApplicationController
     before_action :set_place, only: [:show, :edit, :update, :destroy]
 
+    respond_to :json
+
     def index
       @places = Place.all
-      # @hash = Gmaps4rails.build_markers(@places) do |place, marker|
-      #   marker.lat place.latitude
-      #   marker.lng place.longitude
-      # end
+      @geojson = Array.new
 
-      respond_with(@places)
+      @places.each do |place|
+        @geojson << {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [place.longitude, place.latitude]
+          },
+          properties: {
+            # name: place.name,
+            rate: place.rate,
+            :'marker-color' => '#00607d',
+            :'marker-symbol' => 'circle',
+            :'marker-size' => 'medium'
+          }
+        }
+      end
+
+      respond_to do |format|
+        format.html
+        format.json { render json: @geojson }  # respond with the created JSON object
+      end
     end
 
     def show

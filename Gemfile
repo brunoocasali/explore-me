@@ -14,7 +14,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'gmaps4rails'
+# GOOGLE MAPS
+gem 'gmaps4rails', '1.5.6'
+
+# geocoder gem
+gem "geocoder", '1.1.8'
 
 group :development, :test do
   gem 'pry'
