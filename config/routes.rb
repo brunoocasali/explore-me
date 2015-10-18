@@ -4,8 +4,4 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/index'
-
-  devise_scope :user do
-    delete 'sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
-  end
 end

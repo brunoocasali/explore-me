@@ -31,6 +31,19 @@ body {
 
 /* Custom Button Styles */
 
+.btn-blue {
+  border-radius: 0;
+  color: #fff;
+  background-color: rgb(40, 80, 110);
+}
+
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active {
+  color: #fff;
+  background-color: rgb(59,89,152);
+}
+
 .btn-dark {
     border-radius: 0;
     color: #fff;
