@@ -1,4 +1,4 @@
-require "application_responder"
+require 'application_responder'
 
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   respond_to :js, :html
+
+  def after_sign_in_path_for(resource)
+    request.env['omniauth.origin'] || stored_location_for(resource) || admin_welcome_path
+  end
 end
