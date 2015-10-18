@@ -4,22 +4,22 @@
   <ul class="sidebar-nav">
     <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
     <li class="sidebar-brand">
-      <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+      <a href="#top"  onclick=$("#menu-close").click();>Explore.Me</a>
     </li>
     <li>
-      <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+      <a href="#top" onclick=$("#menu-close").click();>Home</a>
     </li>
     <li>
-      <a href="#about" onclick = $("#menu-close").click(); >About</a>
+      <a href="#about" onclick=$("#menu-close").click();>Sobre</a>
     </li>
     <li>
-      <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+      <a href="#services" onclick=$("#menu-close").click();>Propostas de Valor</a>
     </li>
     <li>
-      <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+      <a href="#portfolio" onclick=$("#menu-close").click();>Imprensa</a>
     </li>
     <li>
-      <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+      <a href="#contact" onclick=$("#menu-close").click();>Contato</a>
     </li>
   </ul>
 </nav>
@@ -28,7 +28,7 @@
 <header id="top" class="header">
   <div class="text-vertical-center">
     <%= image_tag 'explore-me-big.png', alt: 'Explore-Me' %>
-    <h3>Faça da sua cidade a oitava maravilha do mundo!</h3>
+    <h3>Faça da <b>sua</b> cidade a oitava maravilha do mundo!</h3>
     <br>
     <a href="#about" class="btn btn-dark btn-lg">Conheça +</a>
   </div>
@@ -67,7 +67,6 @@
                 <strong>Adicione Lugares</strong>
               </h4>
               <p>Cadastre aquele lugar que você se sempre visita.</p>
-              <a href="#" class="btn btn-light">Veja Mais</a>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
@@ -80,7 +79,6 @@
                 <strong>Demonstre sua paixão</strong>
               </h4>
               <p>Mostre para todo o mundo quão legal é esse espaço. Poste fotos, compartilhe e dê a sua nota, isso conta muito!</p>
-              <a href="#" class="btn btn-light">Veja Mais</a>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
@@ -93,7 +91,6 @@
                 <strong>Atraia público</strong>
               </h4>
               <p>A divulgação feita anteriormente poderá atrair grandes investimentos, assim como viajantes procurando por novidades.</p>
-              <a href="#" class="btn btn-light">Veja Mais</a>
             </div>
           </div>
           <div class="col-md-3 col-sm-6">
@@ -106,7 +103,6 @@
                 <strong>Todos Ganham</strong>
               </h4>
               <p>Com público gerado e investimentos, a sua cidade só tem a crescer.</p>
-              <a href="#" class="btn btn-light">Veja Mais</a>
             </div>
           </div>
         </div>
@@ -131,40 +127,25 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h2>Our Work</h2>
+        <h2>Imprensa</h2>
         <hr class="small">
+
         <div class="row">
-          <div class="col-md-6">
-            <div class="portfolio-item">
-              <a href="#">
-                <%= image_tag 'portfolio-1.jpg' %>
-              </a>
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <div class="portfolio-item">
+                <i class="fa fa-newspaper-o" style="font-size: 12em"></i>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="portfolio-item">
-              <a href="#">
-                <%= image_tag 'portfolio-2.jpg' %>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="portfolio-item">
-              <a href="#">
-                <%= image_tag 'portfolio-3.jpg' %>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="portfolio-item">
-              <a href="#">
-                <%= image_tag 'portfolio-4.jpg' %>
-              </a>
+            <div class="col-md-8 left">
+              <p class="lead" style="text-align: left">Segundo a Braztoa <b>(Associação Brasileira das Operadoras de Turismo)</b> em seu de 2015, que traz dados inéditos sobre o mercado turístico brasileiro, mostrou que as operadoras de turismo associadas à entidade aumentaram seu volume de negócios em 6,65% em 2014, faturando <b>R$ 11,87 bilhões</b>,
+                <a href="http://braztoa.com.br/anuario-braztoa-2015-revela-faturamento-de-quase-12-bilhoes-entre-as-operadoras-de-turismo-em-2014/">fonte.</a>
+              </p>
             </div>
           </div>
         </div>
         <!-- /.row (nested) -->
-        <a href="#" class="btn btn-dark">View More Items</a>
+        <!--<a href="#" class="btn btn-dark">View More Items</a>-->
       </div>
       <!-- /.col-lg-10 -->
     </div>
@@ -178,17 +159,17 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3>The buttons below are impossible to resist.</h3>
-        <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-        <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+        <h3>Comece à usar agora mesmo!</h3>
+        <a href="#" class="btn btn-lg btn-light">App Store</a>
+        <a href="#" class="btn btn-lg btn-dark">ou entre em contato!</a>
       </div>
     </div>
   </div>
 </aside>
 
 <!-- Map -->
-<section id="contact" class="map">
-  <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+<section class="map">
+  <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3583.9640190906084!2d-53.0366009853487!3d-26.067432283498952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f00d399a95f7a7%3A0x47c60b7181749407!2sUNISEP!5e0!3m2!1sen!2sus!4v1445139053023"></iframe>
   <br />
   <small>
     <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
@@ -196,32 +177,34 @@
 </section>
 
 <!-- Footer -->
-<footer>
+<footer id="contact">
   <div class="container">
     <div class="row">
       <div class="col-lg-10 col-lg-offset-1 text-center">
-        <h4><strong>Start Bootstrap</strong>
+        <h4><strong>Uno Team</strong>
         </h4>
         <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
         <ul class="list-unstyled">
-          <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-          <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+          <li><i class="fa fa-phone fa-fw"></i> (46) 9916-3882</li>
+          <li>
+            <i class="fa fa-envelope-o fa-fw"></i>
+            <a href="mailto:brunoocasali@gmail.com">brunoocasali@gmail.com</a>
           </li>
         </ul>
         <br>
         <ul class="list-inline">
           <li>
-            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+            <a href="fb.com/brunoocasali"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+            <a href="twitter.com/brunoocasali"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+            <a href="github.com/brunoocasali"><i class="fa fa-github fa-fw fa-3x"></i></a>
           </li>
         </ul>
         <hr class="small">
-        <p class="text-muted">Copyright &copy; Your Website 2014</p>
+        <p class="text-muted">Copyright &copy; Explore-Me App</p>
       </div>
     </div>
   </div>
