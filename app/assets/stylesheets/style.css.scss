@@ -175,6 +175,18 @@ hr.small {
     -o-background-size: cover;
 }
 
+
+
+.logo {
+  background: url(image_path('explore-me-big.png'));
+}
+
+@media(max-width:768px) {
+  .logo {
+    background: url(image_path('explore-me-small.png'));
+  }
+}
+
 /* About */
 
 .about {

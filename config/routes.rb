@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :places
   namespace :admin do
+    root 'places#index'
+
     resources :welcome, only: :index
+    resources :comments
+    resources :places
   end
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }

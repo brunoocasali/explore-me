@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
+//= require gmaps/google
 //= require turbolinks
+//= require underscore-min
 //= require_tree .
