@@ -237,7 +237,8 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
-  config.omniauth :facebook, "APP_ID", "APP_SECRET"
+  config.omniauth :facebook, '1643071852647885', '5c9eb016690c8e97c32c86af5f5e7863', scope: 'email',
+                  info_fields: 'email, name', client_options: { ssl: { ca_path: '/etc/ssl/certs' } }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
