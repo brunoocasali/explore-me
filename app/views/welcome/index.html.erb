@@ -10,6 +10,9 @@
       <a href="#top" onclick=$("#menu-close").click();>Home</a>
     </li>
     <li>
+      <%= link_to "Entre com o Facebook", user_omniauth_authorize_path(:facebook), onclick: '$("#menu-close").click();' %>
+    </li>
+    <li>
       <a href="#about" onclick=$("#menu-close").click();>Sobre</a>
     </li>
     <li>
