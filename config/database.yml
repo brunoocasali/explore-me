@@ -9,9 +9,3 @@ development:
   database: hub_explore_me_development
   username: 'dba'
   password: 'admin'
-
-production:
-  <<: *default
-  database: hub_explore_me_development
-  username: 'dba'
-  password: 'admin'
