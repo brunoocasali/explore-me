@@ -7,6 +7,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'responders'
 
 gem 'jquery-rails'
 gem 'turbolinks'
