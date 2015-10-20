@@ -1,5 +1,5 @@
 module Admin
-  class PlacesController < ApplicationController
+  class PlacesController < Admin::ApplicationController
     before_action :set_place, only: [:show, :edit, :update, :destroy]
 
     respond_to :json
