@@ -34,9 +34,13 @@
 
     <h3>Faça da <b>sua</b> cidade a oitava maravilha do mundo!</h3>
     <br>
-    <a href="#about" class="btn btn-dark btn-lg">Conheça +</a>
-    <span style="padding: 7px">ou</span>
-    <%= link_to "Entre com o Facebook", user_omniauth_authorize_path(:facebook), class: 'btn btn-blue btn-lg' %>
+    <% if current_user.present? -%>
+      <%= link_to 'Acesse o Sistema!', admin_root_path, class: 'btn btn-dark btn-lg' %>
+    <% else -%>
+      <a href="#about" class="btn btn-dark btn-lg">Conheça +</a>
+      <span style="padding: 7px">ou</span>
+      <%= link_to 'Entre com o Facebook', user_omniauth_authorize_path(:facebook), class: 'btn btn-blue btn-lg' %>
+    <% end -%>
   </div>
 </header>
 

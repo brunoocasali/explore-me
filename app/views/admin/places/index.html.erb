@@ -1,1 +1,27 @@
-<div id='map'></div>
+<div id="map"></div>
+<!--<ul id="marker-list"></ul>-->
+
+<script>
+  L.mapbox.accessToken = 'pk.eyJ1IjoiYnJ1bm9vY2FzYWxpIiwiYSI6ImNpZndnNG14YTJ0NmN2OGx5bm81ejYzcGgifQ.RKVUzMXgCIvJaqGfu9F41w';
+  var map = L.mapbox.map('map', 'mapbox.streets');
+  var markerList = document.getElementById('marker-list');
+
+  var myLayer = L.mapbox.featureLayer().addTo(map);
+  var features = <%= raw @geojson.to_json %>;
+
+  myLayer.setGeoJSON({
+    type: 'FeatureCollection',
+    features: features
+  });
+
+  map.featureLayer.on('ready', function(e) {
+    map.featureLayer.eachLayer(function(layer) {
+      var item = markerList.appendChild(document.createElement('li'));
+      item.innerHTML = layer.toGeoJSON().properties.name;
+      item.onclick = function() {
+        map.setView(layer.getLatLng(), 14);
+        layer.openPopup();
+      };
+    });
+  });
+</script>

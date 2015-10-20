@@ -16,7 +16,7 @@ module Admin
             coordinates: [place.longitude, place.latitude]
           },
           properties: {
-            # name: place.name,
+            name: place.name,
             rate: place.rate,
             :'marker-color' => '#00607d',
             :'marker-symbol' => 'circle',

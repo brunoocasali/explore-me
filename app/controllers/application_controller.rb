@@ -6,11 +6,7 @@ class ApplicationController < ActionController::Base
   respond_to :js, :html
 
   def after_sign_in_path_for(resource_or_scope)
-    if resource.sign_in_count == 1
-      admin_root_path
-    else
-      root_path
-    end
+    admin_root_path
   end
 
   def new_session_path(scope)

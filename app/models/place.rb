@@ -2,7 +2,9 @@ class Place < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
-  validates :user, presence: true, associated: true
+  geocoded_by :address
 
-  acts_as_gmappable process_geocoding: false
+  # validates :user, presence: true, associated: true
+
+  after_validation :geocode
 end

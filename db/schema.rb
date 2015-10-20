@@ -29,10 +29,12 @@ ActiveRecord::Schema.define(version: 20151018075309) do
   add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "places", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.string   "name"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "rate"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
